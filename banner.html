@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML 5 Banner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #animatebanner{
+            width: 1200px;
+            height: 500px;
+            background: #000;
+            background-image: url("sky.jpg");
+            background-repeat: no-repeat;
+            margin: 10vh auto 0;
+            background-size: 100%;
+        }
+        #topDoor{
+            position: absolute;
+            width: 1200px;
+            height: 250px;
+            background: url("metal.jpg") no-repeat center bottom;
+            animation: topOpen 1s ease 1s 1 forwards;
+        }
+        #bottomDoor{
+            position: absolute;
+            height: 250px;
+            width: 1200px;
+            margin-top: 250px;
+            background: url("metal.jpg") no-repeat center top;
+            animation: bottomOpen 1s ease 1s 1 forwards;
+        }
+        #iornman{
+            position: absolute;
+            opacity: 0;
+            height: 50px;
+            margin: 250px 0px 0px 600px;
+            animation: flyiornman 3s ease 2s 1 forwards;
+        }
+        #hulk{
+            position: absolute;
+            opacity: 0;
+            height: 50px;
+            margin: 250px 0px 0px 600px;
+            animation: flyhulk 3s ease 5s 1 forwards;
+        }
+        #captian{
+            position: absolute;
+            opacity: 0;
+            height: 450px;
+            margin: 250px 0px 0px 600px;
+            animation: flycaptian 3s ease 8s 1 forwards;
+        }
+        #thor{
+            position: absolute;
+            opacity: 0;
+            height: 50px;
+            margin: 250px 0px 0px 600px;
+            animation: flythor 3s ease 11s 1 forwards;
+        }
+        #blackwidow{
+            position: absolute;
+            opacity: 0;
+            height: 50px;
+            margin: 250px 0px 0px 600px;
+            animation: flywidow 3s ease 14s 1 forwards;
+        }
+        #strange{
+            position: absolute;
+            opacity: 0;
+            height: 50px;
+            margin: 250px 0px 0px 600px;
+            animation: flystrange 3s ease 17s 1 forwards;
+        }
+        #avengers{
+            position: absolute;
+            opacity: 0;
+            width: 250px;
+            height: 100px;
+            margin: 500px 0px 0px 700px;
+            animation: avenger 1s ease 2s 1 forwards;
+        }
+        #heros{
+            position: absolute;
+            width: 1200px;
+            height: 500px;
+            opacity: 0;
+            animation: heros 1s ease 20s 1 forwards;
+        }
+        @keyframes topOpen {
+
+            0%  {height: 250px;}
+            100% { height: 0px;}
+        }
+        @keyframes bottomOpen {
+
+            0%  {height: 250px; margin-top: 250px;}
+            100% { height: 0px; margin-top: 500px;}
+        }
+        @keyframes flyiornman {
+            0%  {height: 50px; margin: 250px 0px 0px 600px; opacity: 1;}
+            50% { height: 500px; margin: 0px 0px 0px 0px; opacity: 1;}
+            70%  {height: 650px; margin: -50px 0px 0px -80px; opacity: 1;}
+            80%  {height: 650px; margin: -50px 0px 0px -80px; opacity: 1;}
+            90%  {height: 650px; margin: -50px 0px 0px -80px; opacity: 1;}
+            100%  {height: 650px; margin: -50px 0px 0px -150px; opacity: 0;}
+        }
+        @keyframes flyhulk {
+            0%  {height: 50px; margin: 450px 0px 0px 400px; opacity: 1;}
+            50% { height: 450px; margin: 50px 0px 0px 50px; opacity: 1;}
+            50% { height: 450px; margin: 50px 0px 0px 50px; opacity: 1;}
+            80% { height: 450px; margin: -150px 0px 0px 50px; opacity: 1;}
+            100%  {height: 750px; margin: -200px 0px 0px 0px; opacity: 0;}
+        }
+        @keyframes flycaptian {
+            0%  {height: 450px; margin: 50px 0px 0px 0px; opacity: 1;}
+            50% { height: 450px; margin: 50px 0px 0px 150px; opacity: 1;}
+            100%  {height: 450px; margin: 50px 0px 0px 0px; opacity: 0;}
+        }
+        @keyframes flythor {
+            0%  {height: 50px; margin: 0px 0px 0px 0px; opacity: 1;}
+            50% { height: 450px; margin: 50px 0px 0px 150px; opacity: 1;}
+            100% {height: 650px; margin: 450px 0px 0px 150px; opacity: 0;}
+        }
+        @keyframes flywidow {
+            0%  {height: 400px; margin: 50px 0px 0px 0px; opacity: 1;}
+            50% { height: 400px; margin: 50px 0px 0px 150px; opacity: 1;}
+            100%  {height: 400px; margin: 50px 0px 0px 900px; opacity: 0;}
+        }
+        @keyframes flystrange {
+            0%  {height: 50px; margin: 250px 0px 0px 300px; opacity: 1;}
+            50% { height: 450px; margin: 50px 0px 0px 150px; opacity: 1;}
+            100%  {height: 750px; margin: 250px 0px 0px 100px; opacity: 0;}
+        }
+        @keyframes avenger {
+            0%  { opacity: 0; margin-top: 500px;}
+            100% { opacity: 1; margin-top: 250px;}
+        }
+        @keyframes heros {
+            0%  {height: 500px; margin: 500px 0px 0px 0px; opacity: 1;}
+            100% { height: 500px; margin: 0px 0px 0px 0px; opacity: 1; z-index: 11111;}
+        }
+</style>
+</head>
+<body>
+    <div id="animatebanner">
+            <div id="topDoor"></div>
+            <div id="bottomDoor"></div>
+            <img id="iornman" src="iornman.png">
+            <img id="hulk" src="hulk.png">
+            <img id="captian" src="captian.png">
+            <img id="thor" src="thor.png">
+            <img id="blackwidow" src="Blackwidow.png">
+            <img id="strange" src="strange.png">
+            <img id="heros" src="heros.png">
+            <img id="avengers" src="avengers.png">
+    </div>
+    
+</body>
+</html>
